@@ -1,0 +1,32 @@
+# Python compilation caches
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Virtual Environments
+.venv/
+venv/
+env/
+ENV/
+
+# IDE configurations
+.vscode/
+.idea/
+
+# Testing
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Build artifacts
+load-balanced-app.zip
+*.zip
+*.tar.gz
+*.tar
+*.jar
+*.war
+
+# OS metadata
+.DS_Store
+Thumbs.db

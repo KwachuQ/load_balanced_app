@@ -1,0 +1,14 @@
+[Unit]
+Description=FastAPI Load Balanced Application
+After=network.target
+
+[Service]
+User=ec2-user
+WorkingDirectory=/opt/load-balanced-app
+ExecStart=/opt/load-balanced-app/.venv/bin/uvicorn app.app:app --host 0.0.0.0 --port 8080
+Restart=always
+# Set PYTHONPATH so the application can resolve standard and shared packages
+Environment=PYTHONPATH=/opt/load-balanced-app/packages:/opt/load-balanced-app
+
+[Install]
+WantedBy=multi-user.target
